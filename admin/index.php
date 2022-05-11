@@ -54,7 +54,7 @@ function loaduserdata($dbh) {
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-
+loaduserdata($dbh);
 
 
 
@@ -76,6 +76,8 @@ function loaduserdata($dbh) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
 </head>
 <style>
 body {
@@ -111,7 +113,7 @@ body {
                 <li><a href="../mycloud/shares/index.php">Gedeelde bestanden</a></li>
             </ul>
         </div>
-        <div>
+        <div style="width: 100%;">
         <!-- <div><p class="alert">Deze cloud is momenteel onder constructie. Als er problemen zijn met de webpage, stuur een email naar support.jeltecost.nl</p></div> -->
         <form id="form_login" action="../actions/functions/function.php?action=updateprofile" method="post">
             <div class="form-group">
@@ -127,11 +129,14 @@ body {
                 ?>
             </div>
             <h2 class=""><b>Dashboard</b></h2>
-            <p>Uw laatste data:</p>
+            <p style="margin: 0;">Welkom,<b> <?= $_SESSION['session_displayname']; ?></b>. Hier is uw laatste data:</p>
             <div class="counter">
-                <p class="text">All-time Visits: 
+                <p class="text">All-time gebruikers: 
                     <b>
-                        <?= '1'; //$result[0]['page_visits_index']; ?>
+                        <?php
+                        $amount = count($dbh->query("SELECT * FROM users (EXCEPT SELECT * FROM users WHERE administratorrole = 'Y')")->fetchAll());
+                        echo $amount;
+                         ?>
                     </b>
                 </p>
                 <p class="text">All-time Visits: 
@@ -146,26 +151,7 @@ body {
                 </p>
             </div>
 
-
-            <p>Welkom, <?= $_SESSION['session_email']; ?>. Select wat je wilt doen.</p>
-            <!-- make a item picker-->
-
-            <form>
-                <select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-
-            <?php
-            // load user data
-            loaduserdata($dbh);	
-            ?>
-        
-
-
+ 
     </div>
     <!-- jelte was here -->
 </body>

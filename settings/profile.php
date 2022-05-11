@@ -80,7 +80,7 @@ body {
 
 <html>
 <body>
-<div class="header" id="topnav">
+    <div class="header" id="topnav">
         <a class="logo" href="">Jelte's eCloud</a>
         <a href="javascript:void(0);" class="icon" onclick="MenuButtonClick()"><i class="fa fa-bars"></i></a>
 

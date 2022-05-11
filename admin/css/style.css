@@ -1,13 +1,31 @@
-body {
-    background-color: #f2f2f2;
+:root {
+    --background: #fafafa;
+
+    --nav-color: #f1f1f1;;
+    
+    --text-color : #000;
+    --color-link: #00a8ff;
 }
+
+p {
+    color: var(--text-color);
+}
+    
+a {
+    color:  var(--text-color);
+}
+
+.link {
+    color: var(--color-link);
+}
+
 
 .counter {
     overflow: auto;
 }
 
 .counter p {
-    background-color: #1c1c1c;
+    background-color: var(--nav-color);
     border-radius: 5px;
     float: left;
     text-align: center;
@@ -19,9 +37,5 @@ body {
 
 .counter p b {
     font-size: larger;
-}
-
-.counter p {
-    color: #fff;
 }
 

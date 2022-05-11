@@ -1,14 +1,14 @@
 <?php
 
 function verify_email() {
-    $to = 'j.cost@cadicto.nl';
+    $to = '';
     $subject = 'Thank you for your purchase';
     
     $headers = array(
         "MIME-Version" => "1.0",
         "Content-Type" => "text/html; charset=UTF-8",
-        "From" => "support@jeltecost.nl",
-        "Replay-To" => "support@jeltecost.nl",
+        "From" => "",
+        "Replay-To" => "",
     );
     
     

@@ -136,11 +136,6 @@ if (isset($_GET['action'])) {
             $stmt->execute();
             if ($stmt->rowCount() > 0) {
                 header('Location: ../../settings/profile.php?notify=Succes! Alle bestanden zijn verwijderd.');
-                // $receiver = "j.cost@cadicto.nl";
-                // $subject = "Account verwijderd Jelte's eCloud";
-                // $body = "Er is een user verwijderd met de email: ".$_SESSION['session_email']."\n\nHieronder zijn de bestanden die verwijderd zijn: \n\n ".print_r( $files, true );;
-                // $sender = "From: support@jeltecost.nl";
-                // mail($receiver, $subject, $body, $sender);
             } else {
                 header('Location: ../../settings/profile.php?alert=We kunnen geen bestanden vinden in uw Cloud. <a href="../mycloud/upload">Voeg meer toe</a>');
             }
@@ -226,8 +221,8 @@ if (isset($_GET['action'])) {
                         $headers = array(
                             "MIME-Version" => "1.0",
                             "Content-Type" => "text/html; charset=UTF-8",
-                            "From" => "support@jeltecost.nl",
-                            "Replay-To" => "support@jeltecost.nl",
+                            "From" => "",
+                            "Replay-To" => "",
                         );
                         
                         

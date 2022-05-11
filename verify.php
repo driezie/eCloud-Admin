@@ -36,8 +36,8 @@ foreach ($result as $row) {
             $headers = array(
                 "MIME-Version" => "1.0",
                 "Content-Type" => "text/html; charset=UTF-8",
-                "From" => "support@jeltecost.nl",
-                "Replay-To" => "support@jeltecost.nl",
+                "From" => "",
+                "Replay-To" => "",
             );
 
 
