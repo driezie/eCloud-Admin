@@ -36,10 +36,12 @@ if (isset($_POST['submit'])) {
                 // check if user has the Y in administrator_role
                 if ($user['administrator_role'] == 'Y') {
                     $_SESSION['session_role'] = 'admin';
+                    header('Location: ./admin/');
                 } else {
                     $_SESSION['session_role'] = 'user';
+                    header('Location: ./mycloud/');
                 }
-                header('Location: ./mycloud/');
+                
             } else {
                 $alert = "Uw account is nog niet geverifieerd. Controleer uw email voor de verificatie link. of druk <a>hier</a> om een nieuwe verificatie link te ontvangen.";
             }
