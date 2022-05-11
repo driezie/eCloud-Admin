@@ -1,0 +1,23 @@
+.counter {
+    overflow: auto;
+}
+
+.counter p {
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px 10px 10px 0;
+}
+
+.counter p b {
+    font-size: larger;
+}
+
+.counter p {
+    color: #fff;
+}
+

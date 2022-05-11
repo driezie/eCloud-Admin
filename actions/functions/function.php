@@ -44,10 +44,7 @@ if (isset($_GET['action'])) {
             echo "<br>";
             echo "<br>";
             if ($file) {
-                echo "File found<br>";
-                
-
-
+                // echo "File found<br>";
                 $file = "../../myuploads/userid_".$user_id.'/' . $file_name;
                 unlink($file);
                 // check if unlinked
