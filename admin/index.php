@@ -134,7 +134,7 @@ body {
                 <p class="text">All-time gebruikers: 
                     <b>
                         <?php
-                        $amount = count($dbh->query("SELECT * FROM users (EXCEPT SELECT * FROM users WHERE administratorrole = 'Y')")->fetchAll());
+                        $amount = count($dbh->query("SELECT COUNT(*) FROM users WHERE administrator_role = 'customer'")->fetchAll());
                         echo $amount;
                          ?>
                     </b>
