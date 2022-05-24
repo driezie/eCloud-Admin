@@ -4,7 +4,7 @@
 // Als de gegevens kloppen, wordt de gebruiker doorgestuurd naar de volgende pagina.
 // Dit word gestuurd via je email.
 
-
+require_once '../config.php';
 require_once './actions/db/db_connect.php';
 $dbh = getDB();
 

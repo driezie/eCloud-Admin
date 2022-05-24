@@ -1,5 +1,6 @@
 <?php
 // Verbinding met de database folder
+require_once '../../../config.php';
 require_once '../../actions/db/db_connect.php';
 $dbh = getDB();
 
@@ -72,7 +73,7 @@ if (isset($_POST['submit'])) {
                         move_uploaded_file($fileTmpName, $fileDestination);
                         $sql = "INSERT INTO files (file_name,file_destination, file_path, file_type, file_size, file_uploader, file_upload_date) VALUES (?,?, ?, ?, ?, ?, ?)";
                         $stmt = $dbh->prepare($sql);
-                        $stmt->execute([$fileName, $fileDestination, $fileTmpName, $fileType, $fileSize, $user_id, date("Y-m-d H:i:s")]);
+                        $stmt->execute([$fileName, $fileDestination, $fileTmpName, $fileType, $fileSize, $user_id, date("Y-m-d")]);
                         $notify = "Bestand is succesvol in onze cloud geupload!";
                         //echo "<meta http-equiv='refresh' content='3'>";
                     } else {

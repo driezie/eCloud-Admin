@@ -3,6 +3,8 @@
     //Description: Log in scherm voor Driezie's eCloud
 
 // Verbinding met de database folder
+
+require_once '../config.php';
 require_once './actions/db/db_connect.php';
 $dbh = getDB();
 //$alert = "Onze database update is nog niet voltooid, dit is een onderhoudsmelding";
@@ -61,7 +63,7 @@ if (isset($_POST['submit'])) {
 
 
 <head>
-    <title>Login</title>
+    <title><?= $config['site_name'];?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">

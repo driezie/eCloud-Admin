@@ -4,6 +4,7 @@
 
 
 // Verbinding met de database folder
+require_once '../../config.php';
 require_once '../actions/db/db_connect.php';
 $dbh = getDB();
 
@@ -37,7 +38,7 @@ function message($methode,$smg) {
 
 
 <head>
-<title>Your eCloud</title>
+<title><?= $config['site_name'];?></title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="">

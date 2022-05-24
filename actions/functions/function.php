@@ -289,6 +289,18 @@ if (isset($_GET['action'])) {
     }
 }
 
+function getcount_users() {
+    $sqlextra = "administrator_role = 'N'";
+    $sql = "SELECT * FROM users WHERE $sqlextra";
+    $stmt = getDB()->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $count = count($result);
+    echo $count;
+}
+
+
+
 ?>
 <br>
 <br>

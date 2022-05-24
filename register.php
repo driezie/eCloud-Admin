@@ -1,5 +1,6 @@
 <?php
 // Verbinding met de database folder
+require_once '../config.php';
 require_once './actions/db/db_connect.php';
 $dbh = getDB();
 
