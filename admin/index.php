@@ -84,6 +84,10 @@ function Getcount_files() {
             <div id="chart_div" style="width: 100%; height: 500px;"></div>
             <br>
             <div id="chart_div_2" style="width: 100%; height: 500px;"></div>
+            <br>
+            <div id="donutchart_file_types" style="width: 900px; height: 500px;"></div>
+            <br>
+            <div id="chart_div"></div>
  
     </div>
     <!-- jelte was here -->

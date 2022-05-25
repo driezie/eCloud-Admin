@@ -4,9 +4,13 @@ $days[0] = date('Y-m-d');
 
 $data = array();
 $data2 = array();
+$data3 = array();
+$data4 = array();
 
 array_push($data, array("Dag", "Aantal"));
 array_push($data2, array("Dag", "Aantal"));
+array_push($data3, array("ja", "nee"));
+array_push($data4, array("ja", "nee"));
 
 for ($i = 0; $i < 30; $i++) {
     
@@ -46,9 +50,50 @@ for ($i = 0; $i < 30; $i++) {
 
 }
 
+$sql = "SELECT DISTINCT file_type FROM files";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($result as $row) {
+        $sql = "SELECT COUNT(*) FROM files WHERE file_type = :file_type";
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindParam(':file_type', $row['file_type']);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $count_style_type = $result['COUNT(*)'];
+        array_push($data3, array($row['file_type'], $count_style_type)); 
+    }
+      
 // echo '<pre>';
-// print_r($data2) ;
+// print_r($data3);
 // echo '</pre>';
+
+
+
+$sql = "SELECT DISTINCT file_type FROM files";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($result as $row) {
+        // $sql = "SELECT file_size FROM files WHERE file_size = :file_type";
+        // $stmt = $dbh->prepare($sql);
+        // $stmt->bindParam(':file_size', $row['file_size']);
+        // $stmt->execute();
+        // $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        // $count_style_type = $result['file_size'];
+        array_push($data4, array($row['file_type'], $count_style_type)); 
+    }
+      
+echo '<pre>';
+print_r($data4);
+echo '</pre>';
+
+
+
+
+
+
+
 
 
 ?>

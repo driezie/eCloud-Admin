@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
 
     <?php
     // create array with last 30 days
@@ -22,5 +23,7 @@
     require_once './actions/pushing.php';
     require_once './assets/charts/last_30_days_account_created.php';
     require_once './assets/charts/last_30_days_file_created.php';
+    require_once './assets/charts/file_types.php';
+    // require_once './assets/charts/file_size.php';
     ?>
 </head>
