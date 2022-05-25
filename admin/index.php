@@ -57,7 +57,6 @@ function Getcount_files() {
             </ul>
         </div>
         <div style="width: 100%;">
-        <!-- <div><p class="alert">Deze cloud is momenteel onder constructie. Als er problemen zijn met de webpage, stuur een email naar support.jeltecost.nl</p></div> -->
         <form id="form_login" action="../actions/functions/function.php?action=updateprofile" method="post">
             <div class="form-group">
                 <?php require_once './assets/html/alerts.php'; ?>
@@ -81,13 +80,27 @@ function Getcount_files() {
                 </p>
 
             </div>
-            <div id="chart_div" style="width: 100%; height: 500px;"></div>
-            <br>
-            <div id="chart_div_2" style="width: 100%; height: 500px;"></div>
-            <br>
-            <div id="donutchart_file_types" style="width: 900px; height: 500px;"></div>
-            <br>
-            <div id="chart_div"></div>
+
+            <div class="counter">
+                <p>
+                <div id="donutchart_file_types" style="width: 500px; height: 300px;"></div>
+                </p>
+                <p>
+                <div id="donutchart_file_size" style="width: 500px; height: 300px;"></div>
+                </p>
+                <br>
+                <div id="chart_div" style="width: 40%; height: 500px;"></div>
+                <br>
+                <div id="chart_div_2" style="width: 40%; height: 500px;"></div>
+                <br>
+
+            </div>
+
+            
+
+
+            
+            
  
     </div>
     <!-- jelte was here -->

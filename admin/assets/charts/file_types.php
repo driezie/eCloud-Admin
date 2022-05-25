@@ -11,7 +11,7 @@
 
         var options = {
           title: 'File Types',
-          pieHole: 0.4,
+          pieHole: 0.1,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart_file_types'));

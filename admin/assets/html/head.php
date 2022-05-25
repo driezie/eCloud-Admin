@@ -24,6 +24,6 @@
     require_once './assets/charts/last_30_days_account_created.php';
     require_once './assets/charts/last_30_days_file_created.php';
     require_once './assets/charts/file_types.php';
-    // require_once './assets/charts/file_size.php';
+    require_once './assets/charts/file_size.php';
     ?>
 </head>

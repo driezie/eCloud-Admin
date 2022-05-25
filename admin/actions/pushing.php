@@ -75,18 +75,18 @@ $stmt = $dbh->prepare($sql);
 $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $row) {
-        // $sql = "SELECT file_size FROM files WHERE file_size = :file_type";
-        // $stmt = $dbh->prepare($sql);
-        // $stmt->bindParam(':file_size', $row['file_size']);
-        // $stmt->execute();
-        // $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        // $count_style_type = $result['file_size'];
-        array_push($data4, array($row['file_type'], $count_style_type)); 
+        $sql = "SELECT SUM(file_size) FROM files WHERE file_type = :file_type";
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindParam(':file_type', $row['file_type']);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $count_style_type = $result['SUM(file_size)'];
+        array_push($data4, array($row['file_type'], $count_style_type));
     }
       
-echo '<pre>';
-print_r($data4);
-echo '</pre>';
+// echo '<pre>';
+// print_r($data4);
+// echo '</pre>';
 
 
 
