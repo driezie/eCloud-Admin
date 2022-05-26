@@ -4,16 +4,12 @@ $days[0] = date('Y-m-d');
 
 $data = array();
 $data2 = array();
-$data3 = array();
-$data4 = array();
 
 array_push($data, array("Dag", "Aantal"));
 
 // array_push($data, array("2022-05-01", "1"));
 
 array_push($data2, array("Dag", "Aantal"));
-array_push($data3, array("ja", "nee"));
-array_push($data4, array("ja", "nee"));
 
 for ($i = 0; $i < 30; $i++) {
     
@@ -53,6 +49,7 @@ for ($i = 0; $i < 30; $i++) {
 
 }
 
+<<<<<<< HEAD
 // echo '<pre>';
 // print_r($data2);
 // echo '</pre>';
@@ -71,11 +68,14 @@ foreach ($result as $row) {
         array_push($data3, array($row['file_type'], $count_style_type)); 
     }
       
+=======
+>>>>>>> parent of 27d1372 (f)
 // echo '<pre>';
-// print_r($data3);
+// print_r($data2) ;
 // echo '</pre>';
 
 
+<<<<<<< HEAD
 
 $sql = "SELECT DISTINCT file_type FROM files";
 $stmt = $dbh->prepare($sql);
@@ -103,6 +103,8 @@ foreach ($result as $row) {
 
 
 
+=======
+>>>>>>> parent of 27d1372 (f)
 ?>
 
 
