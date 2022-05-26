@@ -49,7 +49,6 @@ for ($i = 0; $i < 30; $i++) {
 
 }
 
-<<<<<<< HEAD
 // echo '<pre>';
 // print_r($data2);
 // echo '</pre>';
@@ -68,14 +67,11 @@ foreach ($result as $row) {
         array_push($data3, array($row['file_type'], $count_style_type)); 
     }
       
-=======
->>>>>>> parent of 27d1372 (f)
 // echo '<pre>';
 // print_r($data2) ;
 // echo '</pre>';
 
 
-<<<<<<< HEAD
 
 $sql = "SELECT DISTINCT file_type FROM files";
 $stmt = $dbh->prepare($sql);
@@ -103,8 +99,6 @@ foreach ($result as $row) {
 
 
 
-=======
->>>>>>> parent of 27d1372 (f)
 ?>
 
 

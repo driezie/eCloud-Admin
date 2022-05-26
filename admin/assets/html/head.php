@@ -22,10 +22,7 @@
     require_once './actions/pushing.php';
     require_once './assets/charts/last_30_days_account_created.php';
     require_once './assets/charts/last_30_days_file_created.php';
-<<<<<<< HEAD
     require_once './assets/charts/file_types.php';
     require_once './assets/charts/file_size.php';
-=======
->>>>>>> parent of 27d1372 (f)
     ?>
 </head>

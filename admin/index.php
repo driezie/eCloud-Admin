@@ -80,7 +80,6 @@ function Getcount_files() {
                 </p>
 
             </div>
-<<<<<<< HEAD
                 <div id="donutchart_file_types" style="width: 500px; height: 300px;"></div>
                 <div id="donutchart_file_size" style="width: 500px; height: 300px;"></div>
                 <br>
@@ -95,11 +94,6 @@ function Getcount_files() {
 
             
             
-=======
-            <div id="chart_div" style="width: 100%; height: 500px;"></div>
-            <br>
-            <div id="chart_div_2" style="width: 100%; height: 500px;"></div>
->>>>>>> parent of 27d1372 (f)
  
     </div>
     <!-- jelte was here -->
