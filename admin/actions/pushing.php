@@ -4,12 +4,16 @@ $days[0] = date('Y-m-d');
 
 $data = array();
 $data2 = array();
+$data3 = array();
+$data4 = array();
 
 array_push($data, array("Dag", "Aantal"));
 
 // array_push($data, array("2022-05-01", "1"));
 
 array_push($data2, array("Dag", "Aantal"));
+array_push($data3, array("ja", "nee"));
+array_push($data4, array("ja", "nee"));
 
 for ($i = 0; $i < 30; $i++) {
     
@@ -23,12 +27,12 @@ for ($i = 0; $i < 30; $i++) {
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $count_account_created = $result['COUNT(*)'];
-    // array_push($data, array($days[$i], $count_account_created)); 
+    array_push($data, array($days[$i], $count_account_created)); 
 }
 
-echo '<pre>';
-print_r($data) ;
-echo '</pre>';
+// echo '<pre>';
+// print_r($data) ;
+// echo '</pre>';
 
 
 // echo '<br><br>';
@@ -68,7 +72,7 @@ foreach ($result as $row) {
     }
       
 // echo '<pre>';
-// print_r($data2) ;
+// print_r($data3);
 // echo '</pre>';
 
 
