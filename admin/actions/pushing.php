@@ -27,12 +27,12 @@ for ($i = 0; $i < 30; $i++) {
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $count_account_created = $result['COUNT(*)'];
-    // array_push($data, array($days[$i], $count_account_created)); 
+    array_push($data, array($days[$i], $count_account_created)); 
 }
 
-echo '<pre>';
-print_r($data) ;
-echo '</pre>';
+// echo '<pre>';
+// print_r($data) ;
+// echo '</pre>';
 
 
 // echo '<br><br>';
