@@ -28,9 +28,9 @@ for ($i = 0; $i < 30; $i++) {
     array_push($data, array($days[$i], $count_account_created)); 
 }
 
-echo '<pre>';
-print_r($data) ;
-echo '</pre>';
+// echo '<pre>';
+// print_r($data) ;
+// echo '</pre>';
 
 
 // echo '<br><br>';
