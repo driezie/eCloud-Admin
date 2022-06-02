@@ -18,8 +18,6 @@ array_push($data4, array("ja", "nee"));
 for ($i = 0; $i < 30; $i++) {
     
     $days[$i] = date('Y-m-d', strtotime('-'.$i.' days'));
-
-    
     // get count of users on the day
     $sql = "SELECT COUNT(*) FROM users WHERE account_created = :account_created AND administrator_role = 'N'";
     $stmt = $dbh->prepare($sql);
@@ -30,9 +28,9 @@ for ($i = 0; $i < 30; $i++) {
     array_push($data, array($days[$i], $count_account_created)); 
 }
 
-// echo '<pre>';
-// print_r($data) ;
-// echo '</pre>';
+echo '<pre>';
+print_r($data) ;
+echo '</pre>';
 
 
 // echo '<br><br>';
